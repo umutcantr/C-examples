@@ -1,4 +1,4 @@
-// This project return square root of entered number.
+// This project return square root of entered number with newton method.
 #include<stdio.h>
 
 void main(){

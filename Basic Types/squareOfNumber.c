@@ -1,4 +1,4 @@
-//This program prints a table of squares for given number. Ýn every 24 column program asks you to whether continue or not.
+//This program prints a table of squares for given number. In every 24 column program asks you to whether continue or not.
 #include<stdio.h>
 
 
