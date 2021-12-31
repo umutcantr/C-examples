@@ -1,4 +1,4 @@
-//This program check digit of EAN code. For more info "https://tr.wikipedia.org/wiki/European_Article_Number"
+//This program finds check digit of EAN code. For more info "https://tr.wikipedia.org/wiki/European_Article_Number"
 #include<stdio.h>
 
 void main(){
