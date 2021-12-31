@@ -1,4 +1,4 @@
-//This program checks UPC code. For more info "https://en.wikipedia.org/wiki/Universal_Product_Code"
+//This program check digit of UPC code. For more info "https://en.wikipedia.org/wiki/Universal_Product_Code"
 #include<stdio.h>
 
 void main(){
