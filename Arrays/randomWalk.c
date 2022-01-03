@@ -9,15 +9,15 @@
 
 void main(){
 
-    char array[SIZE_ROW][SIZE_COLUMN];
+    char array[SIZE_ROW+2][SIZE_COLUMN+2];
     char ch = 'A';
-    int remainder, prev_remaninder = 5,x = 0, y = 0, i, j, control = 0;
+    int remainder, x = 1, y = 1, i, j;  // x,y is coordinats.
 
     srand((unsigned) time(NULL));
 
-    for(i =0; i < SIZE_ROW; i++)
+    for(i =0; i < SIZE_ROW+2; i++)
     {
-        for(j = 0; j < SIZE_COLUMN; j++)
+        for(j = 0; j < SIZE_COLUMN+2; j++)
         {
             array[i][j] = '.';
         }
@@ -29,47 +29,38 @@ void main(){
 
         switch(remainder){
         case 3:
-            if(x > 1 && array[x-1][y] == '.')
-               x--; //up
-            control++;
+            if(x > 2 && array[x-1][y] == '.') x--;
             break;
         case 2:
-            if(y > 1 && array[x][y-1] == '.')
-               y--; //left
-            control++;
+            if(y > 2 && array[x][y-1] == '.') y--;
             break;
         case 1:
-            if(x < 9 && array[x+1][y] == '.')
-              x++; //right
-            control++;
+            if(x < 11 && array[x+1][y] == '.') x++;
             break;
         case 0:
-            if(y < 9 && array[x][y+1] == '.')
-              y++; //down
-            control++;
+            if(y < 11 && array[x][y+1] == '.') y++;
             break;
         }
 
         if(array[x][y] == '.')
         {
               array[x][y] = ch;
-              control = 0;
               ch++;
         }
 
-       if(array[x][y+1] != '.' && array[x][y-1] != '.' && array[x+1][y] != '.'  && array[x-1][y] != '.'){
-            break;
-        }
+       if(array[x][y+1] != '.' && array[x][y-1] != '.' && array[x+1][y] != '.'  && array[x-1][y] != '.') break; // if no other direction to go break the loop.
+
     }
 
-        for(i = 0; i < 10; i++)
-        {
-            for(j = 0; j < 10; j++)
-            {
-                printf("%c\t", array[i][j]);
-            }
-            printf("\n\n");
-        }
 
-        return 0;
+    for(i = 1; i < SIZE_ROW+1; i++)
+    {
+        for(j = 1; j < SIZE_COLUMN+1; j++)
+        {
+            printf("%c\t", array[i][j]);
+        }
+        printf("\n\n");
+    }
+
+    return 0;
 }

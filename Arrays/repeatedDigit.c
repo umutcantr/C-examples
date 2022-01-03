@@ -40,7 +40,7 @@ void main()
         {
             digit_seen[i] = 0;
         }
-        }
+    }
 
     return 0;
 }
