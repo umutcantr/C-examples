@@ -146,6 +146,9 @@ StyleCopReport.xml
 *.tlog
 *.vspscc
 *.vssscc
-.builds
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.builds
 
 
